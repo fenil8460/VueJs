@@ -1,5 +1,7 @@
 <template>
     <div>
+ 
+
   <p v-html="rowHtml"></p>
   <h1 v-once>AdvanceHome Component {{name}}</h1>
   <!--style binding-->
@@ -10,6 +12,12 @@
   <h1 v-bind:class="[aclass]">Class Binding with Array </h1>
   <!--oprater-->
   <h1 v-bind:class="[show?'display':aclass]">Class Binding with Array </h1>
+ 
+  <!-- v-model -->
+  <h1 style="white-space:pre-line">{{message}}</h1>
+
+  <input type="text" v-model="message"><br><br>
+  <textarea type="text" v-model="message" />
 
   <h3>{{19+30}}</h3>
   <h3>{{a+b}}</h3>
@@ -17,8 +25,10 @@
   <button v-bind:disabled="disableBtn" v-on:click="updateText">Click me</button>
   <button  v-on:click="updateText2">disabled</button>
   <Users />
-  <Product />
-  
+  <Product v-bind:users="users"/>
+   <Child v-on:changeTitle="updateTitle($event)"/>
+   
+    <h1>{{title}}</h1>
     </div>
 </template>
 
@@ -26,12 +36,14 @@
 //Multiple Components add
 import Users from './Users'
 import Product from './Product'
+import Child from './Child'
 
 export default {
     name:'AdvanceHome',
     components:{
         Users,
-        Product
+        Product,
+        Child
     },
     data(){
         return {
@@ -43,7 +55,15 @@ export default {
             rowHtml:" <h1>AdvanceHome Component</h1>",
             disableBtn:false,
             show:true,
-            aclass:"arrayClass"
+            aclass:"arrayClass",
+            message:"Hello",
+            users:[
+                    {name:"Fenil",email:"fenil@gmail.com"},
+                    {name:"Darshan",email:"darshan@gmail.com"},
+                    {name:"Nehal",email:"nehal@gmail.com"},
+                    {name:"Hiren",email:"hiren@gmail.com"}
+                ],
+            title:"Props tutorials"
             }
     },
     methods:{
@@ -53,7 +73,11 @@ export default {
         updateText2(){
             this.disableBtn=!this.disableBtn
             this.show=!this.show
+        },
+        updateTitle(title){
+            this.title=title
         }
+
     }
 }
 </script>
@@ -62,7 +86,7 @@ export default {
 
 div {
     background-color: #cbd2d2;
-    height: 500px;
+    
 }
 .display {
     color:orange;

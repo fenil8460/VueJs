@@ -3,17 +3,21 @@
   
  
   <!--<Home data="Fenil is here" msg="hii From Fenil"/>-->
+  
   <AdvanceHome />
+ 
 </template>
 
 <script>
 
 // import Home from './components/Home.vue'
 import AdvanceHome from './components/AdvanceHome.vue'
+// import Child from './components/Child.vue'
 export default {
   name: 'App',
   components: {
     AdvanceHome,
+    // Child 
     // Home
   }
 }

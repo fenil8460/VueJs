@@ -1,14 +1,18 @@
 <template>
     <div class="users">
-  <h1>Product Component : </h1>
-  <h1 v-for="user in users" :key="user.name">Name: {{user.name}}, Email: {{user.email}}</h1>
+  <h1>Child Component : </h1>
+  <button v-on:click="updateTitle">Update Parent title</button>
     </div>
 </template>
 
 <script>
 export default {
-    name:'Product',
-    props:['users']
+    name:'Child',
+    methods:{
+        updateTitle(){
+            this.$emit('changeTitle','Like this Effect')
+        }
+    },
 }
 </script>
 
