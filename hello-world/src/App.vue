@@ -1,15 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+  <h1>Form with checkbox and radio button in Vue Js</h1>   
+    <Signup />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Signup from './components/Signup.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Signup
   }
 }
 </script>
