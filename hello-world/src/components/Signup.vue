@@ -1,5 +1,6 @@
 <template>
     <div>
+    <h1>Get Value checkbox and radio button</h1>
     <input type="text" placeholder="Enter Your Name" v-model="signup.username" /> <br><br>
     <input type="Password" placeholder="Enter Your Password" v-model="signup.password" /> <br><br>
     <input type="checkbox" id="cricket" value="cricket" v-model="signup.hobbies" />

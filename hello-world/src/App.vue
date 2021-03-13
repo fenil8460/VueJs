@@ -1,17 +1,26 @@
 <template>
   <div>
-  <h1>Form with checkbox and radio button in Vue Js</h1>   
+  <h1>Form with  Vue Js</h1>   
+  
+    <!--<Login />-->
+    <Validation />
+    <br>
+    <br>
     <Signup />
   </div>
 </template>
 
 <script>
 import Signup from './components/Signup.vue'
+// import Login from './components/Login.vue'
+import Validation from './components/Validation.vue'
 
 export default {
   name: 'App',
   components: {
-    Signup
+    Signup,
+    Validation
+    // Login
   }
 }
 </script>
