@@ -1,18 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <!--<img alt="Vue logo" src="./assets/logo.png">-->
   
  
-  <Home data="Fenil is here" msg="hii From Fenil"/>
+  <!--<Home data="Fenil is here" msg="hii From Fenil"/>-->
+  <AdvanceHome />
 </template>
 
 <script>
 
-import Home from './components/Home.vue'
+// import Home from './components/Home.vue'
+import AdvanceHome from './components/AdvanceHome.vue'
 export default {
   name: 'App',
   components: {
-    
-    Home
+    AdvanceHome,
+    // Home
   }
 }
 </script>
