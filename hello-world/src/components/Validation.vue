@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1>Login Component</h1>
+        <!-- <h1 style="white-space: pre-line;" >{{message}}</h1> -->
         <p v-if="error.length">
         <b>Please correct the following errors</b>
         <ul>
@@ -10,6 +11,8 @@
         <form @submit="login">
             <input type="text" name="username" placeholder="Enter Username" v-model="name"/><br><br>
             <input type="password" name="password" placeholder="Enter Password" v-model="password" /><br><br>
+  <!-- <textarea  type="text" name="test" placeholder="Enter Password" v-model="message"/><br><br> -->
+
             <button type="submit">Login</button>
 
         </form>
@@ -23,7 +26,8 @@ export default{
         return {
             error:[],
             name:null,
-            password:null
+            password:null,
+            // message:'helo'
         }
     },
     methods:{

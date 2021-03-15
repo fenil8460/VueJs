@@ -1,5 +1,6 @@
 <template>
     <div>
+        
         <h1>Login Component</h1>
 <input type="text" name="username" placeholder="Enter Username" v-model="loginForm.username"/><br><br>
   <input type="password" name="password" placeholder="Enter Password" v-model="loginForm.password"/><br><br>
